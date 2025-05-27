@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ahmed Kossie Kargbo - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">Ahmed Kossie</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero / Landing Section -->
+  <section id="home" class="section hero">
+    <img src="img.jpg" alt="Ahmed's Photo" class="hero-img" />
+    <h1>Ahmed Kossie Kargbo</h1>
+    <p class="typing-text">Mobile App Developer| Web Developer | Computer Science Student</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section skills-section">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Responsive Design</div>
+      <div class="skill">Git & GitHub</div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section projects-section">
+    <h2>Projects</h2>
+
+    <div class="project-card">
+      <h3>Portfolio Website</h3>
+      <p>A clean and modern portfolio website built with HTML, CSS & JavaScript.</p>
+      <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3>To-Do List App</h3>
+      <p>Manage your daily tasks with this simple and efficient To-Do app.</p>
+      <button id="open-todo-btn" class="project-btn">Open To-Do App</button>
+    </div>
+
+    <!-- To-Do List App Container -->
+    <div id="todo-app" class="todo-app hidden">
+      <div class="todo-header">
+        <h3>My To-Do List</h3>
+        <button id="close-todo-btn" class="close-btn" aria-label="Close To-Do App">&times;</button>
+      </div>
+
+      <form id="todo-form">
+        <input type="text" id="todo-input" placeholder="Add a new task..." autocomplete="off" required />
+        <button type="submit">Add</button>
+      </form>
+
+      <ul id="todo-list"></ul>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Ahmed Kossie Kargbo | Web Developer</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

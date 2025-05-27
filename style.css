@@ -1,0 +1,355 @@
+Reset & Base
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f7fa;
+  color: #1e293b;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #1e293b;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #f8fafc;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  cursor: default;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.nav-links a {
+  color: #f8fafc;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+
+.nav-links a:hover {
+  color: #6366f1;
+}
+
+/* Sections */
+.section {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  color: #1e293b;
+}
+
+.hero-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 5px solid #6366f1;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+}
+
+.typing-text {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #4b5563;
+}
+
+/* Skills Section */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.skill {
+  background: #6366f1;
+  color: white;
+  padding: 1rem 1.2rem;
+  border-radius: 14px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(99, 102, 241, 0.25);
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.skill:hover {
+  transform: translateY(-8px);
+}
+
+/* Projects Section */
+.projects-section .project-card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 1.8rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.projects-section .project-card:hover {
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+  transform: translateY(-5px);
+}
+
+.project-card h3 {
+  margin-bottom: 0.7rem;
+  color: #1e293b;
+}
+
+.project-card p {
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.project-link {
+  background: #6366f1;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+  background-color: #4f46e5;
+}
+
+.project-btn {
+  background: transparent;
+  border: 2px solid #6366f1;
+  color: #6366f1;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.project-btn:hover {
+  background: #6366f1;
+  color: white;
+}
+
+/* To-Do List App */
+.todo-app {
+  max-width: 600px;
+  background: white;
+  margin: 2rem auto 0 auto;
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.close-btn {
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9ca3af;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #6366f1;
+}
+
+#todo-form {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+#todo-input {
+  flex-grow: 1;
+  padding: 12px 18px;
+  font-size: 1rem;
+  border: 1.5px solid #d1d5db;
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#todo-input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.4);
+}
+
+#todo-form button {
+  background-color: #6366f1;
+  color: white;
+  padding: 12px 25px;
+  font-weight: 700;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+#todo-form button:hover {
+  background-color: #4f46e5;
+}
+
+#todo-list {
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+#todo-list li {
+  background: #f3f4f6;
+  padding: 12px 18px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+#todo-list li.completed {
+  text-decoration: line-through;
+  color: #9ca3af;
+  background: #e0e7ff;
+}
+
+#todo-list li .delete-btn {
+  background: none;
+  border: none;
+  color: #ef4444;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#todo-list li .delete-btn:hover {
+  color: #b91c1c;
+}
+
+/* Contact Section */
+.contact-section form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-section input,
+.contact-section textarea {
+  padding: 15px 18px;
+  border-radius: 14px;
+  border: 1.5px solid #d1d5db;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.4);
+}
+
+.contact-section button {
+  background-color: #6366f1;
+  color: white;
+  font-weight: 700;
+  padding: 15px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+  background-color: #4f46e5;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  color: #64748b;
+  font-size: 0.9rem;
+  background: #e0e7ff;
+  margin-top: 80px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 1rem;
+  }
+  
+  .skills {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .section {
+    margin: 50px 15px;
+  }
+}
